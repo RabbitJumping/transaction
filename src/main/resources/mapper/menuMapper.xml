@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.transaction.dao.MenuDao">
+    <select id="selectAll" resultType="Menu">
+    select * from menu
+</select>
+    <insert id="insertMenu" >
+        insert into menu values(#{mid},#{mname},#{mtype})
+    </insert>
+    <update id="updateMenu">
+        update menu set mname=#{mname},mtype=#{mtype} where mid=#{mid}
+    </update>
+
+</mapper>
